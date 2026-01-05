@@ -1384,42 +1384,241 @@ const App = () => {
             </button>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Project 1 */}
-            <div className="group relative rounded-xl overflow-hidden cursor-pointer">
-              <div className="aspect-video w-full bg-gray-200 dark:bg-gray-800"></div>
-              <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-6">
-                <span className="text-yellow-400 font-bold uppercase tracking-wide text-sm mb-2">Full-Stack</span>
-                <h3 className="text-2xl font-bold text-white mb-4">E-Commerce Platform</h3>
-                <span className="px-6 py-2 border-2 border-white text-white text-sm font-bold rounded-full hover:bg-white hover:text-black transition-colors">View Project</span>
+            {/* Project 1 - Study Mate */}
+            <motion.div 
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="group relative rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-300"
+            >
+              <div className="aspect-video w-full bg-gradient-to-br from-blue-500 via-purple-600 to-indigo-700 flex items-center justify-center">
+                <motion.div
+                  animate={{ 
+                    scale: [1, 1.1, 1],
+                    rotate: [0, 5, -5, 0]
+                  }}
+                  transition={{ 
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="text-white text-6xl font-bold opacity-20"
+                >
+                  📚
+                </motion.div>
               </div>
-            </div>
-            {/* Project 2 */}
-            <div className="group relative rounded-xl overflow-hidden cursor-pointer">
-              <div className="aspect-video w-full bg-gray-200 dark:bg-gray-800"></div>
               <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-6">
-                <span className="text-yellow-400 font-bold uppercase tracking-wide text-sm mb-2">React App</span>
-                <h3 className="text-2xl font-bold text-white mb-4">Task Management System</h3>
-                <span className="px-6 py-2 border-2 border-white text-white text-sm font-bold rounded-full hover:bg-white hover:text-black transition-colors">View Project</span>
+                <span className="text-yellow-400 font-bold uppercase tracking-wide text-sm mb-2">Full-Stack MERN</span>
+                <h3 className="text-2xl font-bold text-white mb-4">Study Mate</h3>
+                <p className="text-gray-300 text-sm mb-6 max-w-xs">
+                  A comprehensive study platform with assignment management, collaboration tools, and progress tracking.
+                </p>
+                <div className="flex gap-3">
+                  <motion.a
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    href="https://study-mate-597e5.web.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 bg-yellow-500 text-black text-sm font-bold rounded-full hover:bg-yellow-400 transition-colors"
+                  >
+                    Live Demo
+                  </motion.a>
+                  <motion.a
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    href="https://github.com/roymukta21/roy-10th-assingment-client"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 border-2 border-white text-white text-sm font-bold rounded-full hover:bg-white hover:text-black transition-colors"
+                  >
+                    Client Code
+                  </motion.a>
+                  <motion.a
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    href="https://github.com/roymukta21/roy-10th-assingment-server"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 border-2 border-gray-400 text-gray-300 text-sm font-bold rounded-full hover:bg-gray-400 hover:text-black transition-colors"
+                  >
+                    Server Code
+                  </motion.a>
+                </div>
               </div>
-            </div>
-            {/* Project 3 */}
-            <div className="group relative rounded-xl overflow-hidden cursor-pointer">
-              <div className="aspect-video w-full bg-gray-200 dark:bg-gray-800"></div>
+            </motion.div>
+            {/* Project 2 - FireShield */}
+            <motion.div 
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="group relative rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-300"
+            >
+              <div className="aspect-video w-full bg-gradient-to-br from-red-500 via-orange-600 to-yellow-500 flex items-center justify-center">
+                <motion.div
+                  animate={{ 
+                    scale: [1, 1.2, 1],
+                    rotate: [0, 10, -10, 0]
+                  }}
+                  transition={{ 
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="text-white text-6xl font-bold opacity-20"
+                >
+                  🔥
+                </motion.div>
+              </div>
               <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-6">
-                <span className="text-yellow-400 font-bold uppercase tracking-wide text-sm mb-2">MERN Stack</span>
-                <h3 className="text-2xl font-bold text-white mb-4">Social Media Dashboard</h3>
-                <span className="px-6 py-2 border-2 border-white text-white text-sm font-bold rounded-full hover:bg-white hover:text-black transition-colors">View Project</span>
+                <span className="text-yellow-400 font-bold uppercase tracking-wide text-sm mb-2">React Firebase</span>
+                <h3 className="text-2xl font-bold text-white mb-4">SkillSwap</h3>
+                <p className="text-gray-300 text-sm mb-6 max-w-xs">
+                  A security-focused web application with Firebase authentication and real-time data management.
+                </p>
+                <div className="flex gap-3">
+                  <motion.a
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    href="https://skill-swap-889ae.web.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 bg-yellow-500 text-black text-sm font-bold rounded-full hover:bg-yellow-400 transition-colors"
+                  >
+                    Live Demo
+                  </motion.a>
+                  <motion.a
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    href="https://github.com/programming-hero-web-course2/b12-a9-firesheild-roymukta21"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 border-2 border-white text-white text-sm font-bold rounded-full hover:bg-white hover:text-black transition-colors"
+                  >
+                    View Code
+                  </motion.a>
+                </div>
               </div>
-            </div>
-            {/* Project 4 */}
-            <div className="group relative rounded-xl overflow-hidden cursor-pointer">
-              <div className="aspect-video w-full bg-gray-200 dark:bg-gray-800"></div>
+            </motion.div>
+            {/* Project 3 - Local Chef Bazaar */}
+            <motion.div 
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="group relative rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-300"
+            >
+              <div className="aspect-video w-full bg-gradient-to-br from-green-500 via-emerald-600 to-teal-600 flex items-center justify-center">
+                <motion.div
+                  animate={{ 
+                    scale: [1, 1.15, 1],
+                    rotate: [0, -5, 5, 0]
+                  }}
+                  transition={{ 
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="text-white text-6xl font-bold opacity-20"
+                >
+                  👨‍🍳
+                </motion.div>
+              </div>
               <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-6">
-                <span className="text-yellow-400 font-bold uppercase tracking-wide text-sm mb-2">Next.js</span>
-                <h3 className="text-2xl font-bold text-white mb-4">Portfolio Website</h3>
-                <span className="px-6 py-2 border-2 border-white text-white text-sm font-bold rounded-full hover:bg-white hover:text-black transition-colors">View Project</span>
+                <span className="text-yellow-400 font-bold uppercase tracking-wide text-sm mb-2">Full-Stack MERN</span>
+                <h3 className="text-2xl font-bold text-white mb-4">Local Chef Bazaar</h3>
+                <p className="text-gray-300 text-sm mb-6 max-w-xs">
+                  A local chef marketplace connecting food lovers with talented home chefs in their area.
+                </p>
+                <div className="flex gap-3">
+                  <motion.a
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    href="https://local-chef-bazaar-a84fe.web.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 bg-yellow-500 text-black text-sm font-bold rounded-full hover:bg-yellow-400 transition-colors"
+                  >
+                    Live Demo
+                  </motion.a>
+                  <motion.a
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    href="https://github.com/roymukta21/roy-11th-assignment-client"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 border-2 border-white text-white text-sm font-bold rounded-full hover:bg-white hover:text-black transition-colors"
+                  >
+                    Client Code
+                  </motion.a>
+                  <motion.a
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    href="https://github.com/roymukta21/roy-11th-assignment-server"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 border-2 border-gray-400 text-gray-300 text-sm font-bold rounded-full hover:bg-gray-400 hover:text-black transition-colors"
+                  >
+                    Server Code
+                  </motion.a>
+                </div>
               </div>
-            </div>
+            </motion.div>
+            {/* Project 4 - Starlight Portfolio */}
+            <motion.div 
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="group relative rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-300"
+            >
+              <div className="aspect-video w-full bg-gradient-to-br from-purple-500 via-pink-600 to-rose-600 flex items-center justify-center">
+                <motion.div
+                  animate={{ 
+                    scale: [1, 1.3, 1],
+                    rotate: [0, 360]
+                  }}
+                  transition={{ 
+                    scale: { duration: 3, repeat: Infinity, ease: "easeInOut" },
+                    rotate: { duration: 8, repeat: Infinity, ease: "linear" }
+                  }}
+                  className="text-white text-6xl font-bold opacity-20"
+                >
+                  ⭐
+                </motion.div>
+              </div>
+              <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-6">
+                <span className="text-yellow-400 font-bold uppercase tracking-wide text-sm mb-2">React Portfolio</span>
+                <h3 className="text-2xl font-bold text-white mb-4">HeroApps</h3>
+                <p className="text-gray-300 text-sm mb-6 max-w-xs">
+                  At HERO.IO, we craft innovative apps designed to make everyday life simpler, smarter, and more exciting. Our goal is to turn your ideas into digital experiences that truly make an impact.
+                </p>
+                <div className="flex gap-3">
+                  <motion.a
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    href="https://startling-starlight-212fd7.netlify.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 bg-yellow-500 text-black text-sm font-bold rounded-full hover:bg-yellow-400 transition-colors"
+                  >
+                    Live Demo
+                  </motion.a>
+                  <motion.a
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    href="https://github.com/roymukta21/roy-8th-assingment"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 border-2 border-white text-white text-sm font-bold rounded-full hover:bg-white hover:text-black transition-colors"
+                  >
+                    View Code
+                  </motion.a>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
