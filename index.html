@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mukta Roy  &amp; Web Developer</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>i
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee8c2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221910",
+                        "text-main": "#1b140d",
+                        "text-muted": "#9a734c",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .section-padding {
+                @apply px-4 py-16 md:px-10 md:py-24;
+            }
+            .container-max {
+                @apply max-w-[1200px] mx-auto;
+            }
+            .nav-link {
+                @apply text-text-main dark:text-white text-sm font-medium hover:text-primary transition-colors;
+            }
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main dark:text-gray-100 overflow-x-hidden">
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 w-full border-b border-[#f3ede7] dark:border-white/10 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md">
+<div class="container-max px-4 md:px-10 py-3 flex items-center justify-between">
+<div class="flex items-center gap-2 text-text-main dark:text-white">
+<div class="size-8 rounded bg-primary flex items-center justify-center text-text-main">
+<span class="material-symbols-outlined text-[20px] font-bold">design_services</span>
+</div>
+<h2 class="text-lg font-bold tracking-tight">James.</h2>
+</div>
+<div class="hidden lg:flex items-center gap-8">
+<a class="nav-link" href="#home">Home</a>
+<a class="nav-link" href="#about">About</a>
+<a class="nav-link" href="#services">Services</a>
+<a class="nav-link" href="#skills">Skills</a>
+<a class="nav-link" href="#portfolio">Portfolio</a>
+<a class="nav-link" href="#contact">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex h-10 px-4 bg-primary hover:bg-primary/90 transition-colors rounded-lg items-center justify-center text-text-main text-sm font-bold">
+<span class="truncate">Download CV</span>
+<span class="material-symbols-outlined ml-2 text-lg">download</span>
+</button>
+<button class="lg:hidden p-2 text-text-main dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative section-padding flex items-center min-h-[90vh]" id="home">
+<div class="container-max w-full">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="order-2 lg:order-1 flex flex-col gap-6 text-left">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 w-fit">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-primary text-xs font-bold uppercase tracking-wider">Available for work</span>
+</div>
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-text-main dark:text-white">
+                        Hello, I'm <span class="text-primary">James Smith</span>,<br/>
+                        A Creative UI/UX Designer &amp; Developer.
+                    </h1>
+<p class="text-lg text-text-muted dark:text-gray-400 max-w-lg">
+                        Based in New York. I create beautiful and functional digital experiences for small businesses and startups.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-2">
+<a class="h-12 px-8 bg-primary hover:bg-primary/90 transition-all rounded-lg flex items-center justify-center text-text-main text-base font-bold shadow-lg shadow-primary/25" href="#contact">
+                            Hire Me
+                        </a>
+<a class="h-12 px-8 bg-white dark:bg-white/10 border border-[#f3ede7] dark:border-white/10 hover:bg-gray-50 dark:hover:bg-white/20 transition-all rounded-lg flex items-center justify-center text-text-main dark:text-white text-base font-bold" href="#portfolio">
+                            View Work
+                        </a>
+</div>
+<div class="flex items-center gap-6 mt-8 pt-8 border-t border-[#f3ede7] dark:border-white/10">
+<div>
+<p class="text-3xl font-black text-text-main dark:text-white">5+</p>
+<p class="text-sm text-text-muted dark:text-gray-500">Years Experience</p>
+</div>
+<div class="w-px h-10 bg-[#f3ede7] dark:bg-white/10"></div>
+<div>
+<p class="text-3xl font-black text-text-main dark:text-white">100+</p>
+<p class="text-sm text-text-muted dark:text-gray-500">Projects Completed</p>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 relative">
+<div class="absolute inset-0 bg-primary/20 rounded-full blur-3xl transform translate-x-10 translate-y-10 -z-10"></div>
+<div class="aspect-square rounded-2xl overflow-hidden bg-gray-200 dark:bg-gray-800 relative z-10 border-4 border-white dark:border-white/5 shadow-2xl" data-alt="Portrait of James Smith looking professional and friendly" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAOf7aKhDs20CO8kjcdwrAPYuygjHU9uQ4FOeU-xTCcP-mNtZChkoSyQ7ddO8xrpl2rwzLYLOMxDJHwwTj2Zv5r45DrtvkXaLFkxWWm6u7XFK3-aqrNuaYxdyyCk8uQAd6cRIRz4ImXcR48yx99jjMmdQE8_q7xpAequnEntWnZXQq28384Wu2L_Iop7PsrqD4Lw90r72kPNpjyhk_SeCSGZWUz8u5MIYPovvRjjNib2uZ0sdbJbuP7NoxLQXq2YuSIUdzdbjQZrLlM"); background-size: cover; background-position: center;'>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Me -->
+<section class="section-padding bg-white dark:bg-white/5" id="about">
+<div class="container-max">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="relative rounded-lg overflow-hidden h-full min-h-[400px]" data-alt="Abstract design workspace with laptop and sketches" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC5e17omO3ge6NGgbJIcSZk5aaWs4nldVhXzehjXlB8k_Ct6Iv2ZPDsqqyKE9SoCxEWP2L0bJOWQvyGOsH-uzTv_51CUvzoQ8UHLeHtsHcfoISTiobDtVdMOhMli62W8UC9wd9-saN8glCZ3theYDVn_hMk12ZjkOobq_aKanOgy5DruWbAxyPgPB1_cOYIZsfHakFiC60wmewwEvu4ArFWofKBX3-baWWm36v0ale3_9-l22woCejaPBoO50ZHqDYZJVulfRybD-ju"); background-size: cover; background-position: center;'>
+<div class="absolute inset-0 bg-black/20"></div>
+</div>
+<div class="flex flex-col gap-6">
+<div>
+<span class="text-primary font-bold uppercase tracking-wider text-sm">About Me</span>
+<h2 class="text-3xl font-bold mt-2 mb-4 text-text-main dark:text-white">Design is not just what it looks like and feels like. Design is how it works.</h2>
+</div>
+<p class="text-text-muted dark:text-gray-400 leading-relaxed">
+                        I am a passionate UI/UX designer with over 5 years of experience in creating digital experiences. I love to turn complex problems into simple, beautiful, and intuitive designs. My journey started in graphic design, but I quickly fell in love with the interactive nature of web development.
+                    </p>
+<p class="text-text-muted dark:text-gray-400 leading-relaxed">
+                        When I'm not pushing pixels, you can find me exploring New York's coffee shops or hiking up north. I believe in continuous learning and staying updated with the latest design trends.
+                    </p>
+<div class="grid grid-cols-2 gap-4 mt-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span class="text-sm font-medium">james.smith@example.com</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="text-sm font-medium">New York, USA</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">language</span>
+<span class="text-sm font-medium">English, Spanish</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">work</span>
+<span class="text-sm font-medium">Freelance Available</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services -->
+<section class="section-padding" id="services">
+<div class="container-max">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-primary font-bold uppercase tracking-wider text-sm">Services</span>
+<h2 class="text-3xl md:text-4xl font-black mt-2 text-text-main dark:text-white">What I Do</h2>
+<p class="text-text-muted dark:text-gray-400 mt-4">
+                    I offer a full range of services from design to development, ensuring your digital presence is top-notch.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Service 1 -->
+<div class="p-8 rounded-xl bg-white dark:bg-white/5 border border-[#f3ede7] dark:border-white/10 hover:border-primary/50 transition-all group hover:-translate-y-1">
+<div class="size-14 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-text-main transition-colors">
+<span class="material-symbols-outlined text-3xl">web</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-text-main dark:text-white">UI/UX Design</h3>
+<p class="text-text-muted dark:text-gray-400 text-sm leading-relaxed">
+                        Creating intuitive and aesthetically pleasing interfaces for web and mobile applications that focus on user experience.
+                    </p>
+</div>
+<!-- Service 2 -->
+<div class="p-8 rounded-xl bg-white dark:bg-white/5 border border-[#f3ede7] dark:border-white/10 hover:border-primary/50 transition-all group hover:-translate-y-1">
+<div class="size-14 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-text-main transition-colors">
+<span class="material-symbols-outlined text-3xl">code</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-text-main dark:text-white">Web Development</h3>
+<p class="text-text-muted dark:text-gray-400 text-sm leading-relaxed">
+                        Building responsive, fast, and SEO-friendly websites using modern technologies like React, Tailwind, and Node.js.
+                    </p>
+</div>
+<!-- Service 3 -->
+<div class="p-8 rounded-xl bg-white dark:bg-white/5 border border-[#f3ede7] dark:border-white/10 hover:border-primary/50 transition-all group hover:-translate-y-1">
+<div class="size-14 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-text-main transition-colors">
+<span class="material-symbols-outlined text-3xl">smartphone</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-text-main dark:text-white">App Design</h3>
+<p class="text-text-muted dark:text-gray-400 text-sm leading-relaxed">
+                        Designing engaging mobile app interfaces for both iOS and Android platforms, strictly following guidelines.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills -->
+<section class="section-padding bg-text-main text-white relative overflow-hidden" id="skills">
+<!-- Background decorative elements -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+<div class="container-max relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<span class="text-primary font-bold uppercase tracking-wider text-sm">Professional Skills</span>
+<h2 class="text-3xl md:text-4xl font-black mt-2 text-white">My Expertise</h2>
+</div>
+<p class="text-gray-400 max-w-md text-sm md:text-right">
+                    I constantly update my skills to stay current with the latest industry trends and technologies.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Frontend -->
+<div class="space-y-6">
+<h3 class="text-xl font-bold flex items-center gap-2 border-b border-white/10 pb-4">
+<span class="material-symbols-outlined text-primary">html</span> Frontend
+                    </h3>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between text-sm mb-1"><span>HTML5 &amp; CSS3</span> <span class="text-primary">95%</span></div>
+<div class="h-2 w-full bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-primary w-[95%]"></div></div>
+</div>
+<div>
+<div class="flex justify-between text-sm mb-1"><span>JavaScript (ES6+)</span> <span class="text-primary">85%</span></div>
+<div class="h-2 w-full bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-primary w-[85%]"></div></div>
+</div>
+<div>
+<div class="flex justify-between text-sm mb-1"><span>React / Vue</span> <span class="text-primary">90%</span></div>
+<div class="h-2 w-full bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-primary w-[90%]"></div></div>
+</div>
+<div>
+<div class="flex justify-between text-sm mb-1"><span>Tailwind CSS</span> <span class="text-primary">95%</span></div>
+<div class="h-2 w-full bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-primary w-[95%]"></div></div>
+</div>
+</div>
+</div>
+<!-- Backend -->
+<div class="space-y-6">
+<h3 class="text-xl font-bold flex items-center gap-2 border-b border-white/10 pb-4">
+<span class="material-symbols-outlined text-primary">database</span> Backend
+                    </h3>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between text-sm mb-1"><span>Node.js</span> <span class="text-primary">80%</span></div>
+<div class="h-2 w-full bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-primary w-[80%]"></div></div>
+</div>
+<div>
+<div class="flex justify-between text-sm mb-1"><span>Python / Django</span> <span class="text-primary">70%</span></div>
+<div class="h-2 w-full bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-primary w-[70%]"></div></div>
+</div>
+<div>
+<div class="flex justify-between text-sm mb-1"><span>SQL / MongoDB</span> <span class="text-primary">75%</span></div>
+<div class="h-2 w-full bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-primary w-[75%]"></div></div>
+</div>
+</div>
+</div>
+<!-- Tools -->
+<div class="space-y-6">
+<h3 class="text-xl font-bold flex items-center gap-2 border-b border-white/10 pb-4">
+<span class="material-symbols-outlined text-primary">brush</span> Tools
+                    </h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded bg-white/10 text-sm hover:bg-primary hover:text-text-main transition-colors cursor-default">Figma</span>
+<span class="px-3 py-1.5 rounded bg-white/10 text-sm hover:bg-primary hover:text-text-main transition-colors cursor-default">Adobe XD</span>
+<span class="px-3 py-1.5 rounded bg-white/10 text-sm hover:bg-primary hover:text-text-main transition-colors cursor-default">Photoshop</span>
+<span class="px-3 py-1.5 rounded bg-white/10 text-sm hover:bg-primary hover:text-text-main transition-colors cursor-default">Illustrator</span>
+<span class="px-3 py-1.5 rounded bg-white/10 text-sm hover:bg-primary hover:text-text-main transition-colors cursor-default">VS Code</span>
+<span class="px-3 py-1.5 rounded bg-white/10 text-sm hover:bg-primary hover:text-text-main transition-colors cursor-default">Git/GitHub</span>
+<span class="px-3 py-1.5 rounded bg-white/10 text-sm hover:bg-primary hover:text-text-main transition-colors cursor-default">Jira</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Projects -->
+<section class="section-padding" id="portfolio">
+<div class="container-max">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<span class="text-primary font-bold uppercase tracking-wider text-sm">Portfolio</span>
+<h2 class="text-3xl md:text-4xl font-black mt-2 text-text-main dark:text-white">Featured Projects</h2>
+</div>
+<button class="flex items-center gap-2 text-sm font-bold text-primary hover:underline">
+                    View All Projects <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Project 1 -->
+<div class="group relative rounded-xl overflow-hidden cursor-pointer">
+<div class="aspect-video w-full bg-gray-200" data-alt="Modern banking dashboard interface on a laptop screen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBWFC9Q9tYDox8o8ZNIbWDFjt5V5hreyCHNjiCnT_AXQ0kriIA4b--GrrJEEH_E7Rsr8XnrRM1CaHjqaIxsUxEzOxFdGFL71OQjAiyxZcSgWgiw91DOIKH_9Y41KfoLuYqETEOwZaMOTQb5-U6ZK1OYYv_SSuwO30lkrCDfH6nXRcijGebxNNIEuqZlDh4Liz7fIN6QBMEGAyLiuN4eryMZ2jnHob7cxFwIBKnBeuWCxZxV_3D97JcfvGMhw5CPPoWXBEqEs_qn0GWC"); background-size: cover; background-position: center;'></div>
+<div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-6">
+<span class="text-primary font-bold text-sm mb-2 uppercase tracking-wide">Fintech</span>
+<h3 class="text-2xl font-bold text-white mb-4">Banking App Dashboard</h3>
+<span class="px-6 py-2 border-2 border-white text-white rounded-full text-sm font-bold hover:bg-white hover:text-black transition-colors">View Case Study</span>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group relative rounded-xl overflow-hidden cursor-pointer">
+<div class="aspect-video w-full bg-gray-200" data-alt="Vibrant e-commerce fashion website homepage" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB6oevM483kQwUTToNAypQzx1n-o2Ve4AGPR5zk2VLuCPqqwBIqjZSrfhTnOfNEAVG9MgDqkwvQ4XZMZKKQvfvL5bh0sxF3Gl2YGmiZnSqUv0hipzyQwpJq3oUNWc8c93rsE299yVUqXLxJO5coT-3G02s_IqBFGUzZbseGEoQRFDh6Rv5rU7aGqkCD6HRrtGOnLR_3eSSbceljtGXz4JVQAUq1XywZc1As2HltIh3RBUG6dcdTzV496rwr3uKO98MUOk3J22jQ4BhQ"); background-size: cover; background-position: center;'></div>
+<div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-6">
+<span class="text-primary font-bold text-sm mb-2 uppercase tracking-wide">E-Commerce</span>
+<h3 class="text-2xl font-bold text-white mb-4">Fashion Store Redesign</h3>
+<span class="px-6 py-2 border-2 border-white text-white rounded-full text-sm font-bold hover:bg-white hover:text-black transition-colors">View Case Study</span>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="group relative rounded-xl overflow-hidden cursor-pointer">
+<div class="aspect-video w-full bg-gray-200" data-alt="Minimalist mobile travel application screens" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAsb8FnH9zoqePQ6E228_SC0pTfilXXcrNONYE6ae25fjRJyTNfwSaKjl5cQnWzzlRrw54uN8prCJVW5XdAYF8vhHfXZtRP7B5CM1sxNZRTMceWeKHxu0NCN_Hs96MA8ndL3ez7_i35CTvQ671052BplZX-36pPrsaBjeQ5DjMmwt6lHiFAezdfrohjz0jhbXRKrBuOD3PBGq2AX3wGVRS7T6BDt3yNId02lTRE0MomaLb-ayhiblYwPs3-Uqet5fqyB7OVzecmYjlx"); background-size: cover; background-position: center;'></div>
+<div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-6">
+<span class="text-primary font-bold text-sm mb-2 uppercase tracking-wide">Mobile App</span>
+<h3 class="text-2xl font-bold text-white mb-4">Travel Guide App</h3>
+<span class="px-6 py-2 border-2 border-white text-white rounded-full text-sm font-bold hover:bg-white hover:text-black transition-colors">View Case Study</span>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="group relative rounded-xl overflow-hidden cursor-pointer">
+<div class="aspect-video w-full bg-gray-200" data-alt="Sleek dark mode corporate website layout" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC4uaRj0qiSxm354wdeazNypDasmFJ1RCmeu--8zwiBABZkTUxvJv0YSqvuQw0uy6daeo6P2FxgkDkB8hU-TV_McjfUQhD4yd4gs_Vj1UJ3jD0t0nQi1Ix94TWpKYDnAun1NL2mjlUTAw67ct-uEdzURTrSuRUwej5i0giPc3KSQEcg3x0oFnACJOfOXNLx-Bet77Zlxah9QfxtIVn3BWMYDml6N2FwlcW9rL1wXOvtbfhcOw2evKvyTIY7MNjGQ4dEtiMPGUolrJ0U"); background-size: cover; background-position: center;'></div>
+<div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-6">
+<span class="text-primary font-bold text-sm mb-2 uppercase tracking-wide">Corporate</span>
+<h3 class="text-2xl font-bold text-white mb-4">Tech Agency Website</h3>
+<span class="px-6 py-2 border-2 border-white text-white rounded-full text-sm font-bold hover:bg-white hover:text-black transition-colors">View Case Study</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="section-padding bg-white dark:bg-white/5" id="contact">
+<div class="container-max">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-primary font-bold uppercase tracking-wider text-sm">Contact</span>
+<h2 class="text-3xl md:text-4xl font-black mt-2 text-text-main dark:text-white">Let's Work Together</h2>
+<p class="text-text-muted dark:text-gray-400 mt-4">
+                    Have a project in mind? Let's discuss how I can help you achieve your goals.
+                </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
+<!-- Contact Info -->
+<div class="lg:col-span-2 flex flex-col gap-8">
+<div class="p-6 rounded-xl bg-background-light dark:bg-background-dark border border-[#f3ede7] dark:border-white/10">
+<div class="size-10 rounded bg-primary/20 text-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">call</span>
+</div>
+<h4 class="font-bold text-text-main dark:text-white mb-1">Phone</h4>
+<p class="text-text-muted dark:text-gray-400 text-sm">+1 (555) 123-4567</p>
+</div>
+<div class="p-6 rounded-xl bg-background-light dark:bg-background-dark border border-[#f3ede7] dark:border-white/10">
+<div class="size-10 rounded bg-primary/20 text-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<h4 class="font-bold text-text-main dark:text-white mb-1">Email</h4>
+<p class="text-text-muted dark:text-gray-400 text-sm">hello@jamessmith.design</p>
+</div>
+<div class="p-6 rounded-xl bg-background-light dark:bg-background-dark border border-[#f3ede7] dark:border-white/10">
+<div class="size-10 rounded bg-primary/20 text-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<h4 class="font-bold text-text-main dark:text-white mb-1">Location</h4>
+<p class="text-text-muted dark:text-gray-400 text-sm">123 Design Street, New York, NY 10001</p>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="lg:col-span-3">
+<form class="flex flex-col gap-6 bg-background-light dark:bg-background-dark p-8 rounded-xl border border-[#f3ede7] dark:border-white/10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold text-text-main dark:text-white" for="name">Your Name</label>
+<input class="h-12 px-4 rounded-lg bg-white dark:bg-white/5 border border-[#f3ede7] dark:border-white/10 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all dark:text-white" id="name" placeholder="John Doe" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold text-text-main dark:text-white" for="email">Your Email</label>
+<input class="h-12 px-4 rounded-lg bg-white dark:bg-white/5 border border-[#f3ede7] dark:border-white/10 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all dark:text-white" id="email" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold text-text-main dark:text-white" for="subject">Subject</label>
+<input class="h-12 px-4 rounded-lg bg-white dark:bg-white/5 border border-[#f3ede7] dark:border-white/10 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all dark:text-white" id="subject" placeholder="Project Inquiry" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold text-text-main dark:text-white" for="message">Message</label>
+<textarea class="p-4 rounded-lg bg-white dark:bg-white/5 border border-[#f3ede7] dark:border-white/10 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all dark:text-white resize-none" id="message" placeholder="Tell me about your project..." rows="5"></textarea>
+</div>
+<button class="h-12 px-8 bg-primary hover:bg-primary/90 transition-colors rounded-lg flex items-center justify-center text-text-main font-bold w-fit mt-2" type="button">
+                            Send Message
+                        </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#1b140d] text-white py-12 border-t border-white/10">
+<div class="container-max px-4 md:px-10 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex flex-col items-center md:items-start gap-2">
+<h2 class="text-2xl font-bold tracking-tight">James.</h2>
+<p class="text-gray-400 text-sm">© 2024 James Smith. All rights reserved.</p>
+</div>
+<div class="flex items-center gap-6">
+<a class="text-gray-400 hover:text-primary transition-colors" href="#">
+<!-- Social icon placeholder using material symbols for demo -->
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="text-gray-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+<a class="text-gray-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">link</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>
