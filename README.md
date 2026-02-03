@@ -139,7 +139,7 @@ Primary colors are defined in CSS variables:
 
 - **Email**: muktaroy520@gmail.com.com
 - **Location**: Bangladesh
-- **Specialization**: Full-Stack Web Development
+- **Specialization**:  Web Development
 
 ## 📄 **License**
 

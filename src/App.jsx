@@ -270,7 +270,7 @@ const App = () => {
                 size="default"
                 className="flex items-center gap-2"
               >
-                <span>Download CV</span>
+                <span>Resume</span>
                 <motion.span 
                   animate={{ y: [0, -2, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
@@ -345,16 +345,25 @@ const App = () => {
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-text-main dark:text-white mt-4">
                 Hi, I'm <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">Mukta Roy</span>.<br/>
-                A Passionate Full-Stack Web Developer.
+                A Passionate Web Developer.
               </h1>
               <p className="text-text-muted dark:text-gray-400 text-lg mt-6">
                 Based in Bangladesh. I build modern, scalable web applications using cutting-edge technologies and best practices.
               </p>
               <div className="flex items-center gap-4 mt-8">
-                <Button size="lg" className="flex items-center">
+                <Button 
+                  size="lg" 
+                  className="flex items-center"
+                  onClick={() => scrollToSection('contact')}
+                >
                   Hire Me
                 </Button>
-                <Button variant="outline" size="lg" className="flex items-center">
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="flex items-center"
+                  onClick={() => scrollToSection('portfolio')}
+                >
                   View Work
                 </Button>
               </div>
@@ -536,7 +545,7 @@ const App = () => {
                 {[
                   { icon: 'mail', text: 'muktaroy520@gmail.com' },
                   { icon: 'location_on', text: 'Bangladesh' },
-                  { icon: 'code', text: 'Full-Stack Developer' },
+                  { icon: 'code', text: 'Web Developer' },
                   { icon: 'work', text: 'Available for projects' }
                 ].map((item, index) => (
                   <motion.div
@@ -622,7 +631,12 @@ const App = () => {
             <motion.div
               initial={{ opacity: 0, y: 100, x: -50 }}
               whileInView={{ opacity: 1, y: 0, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
+              transition={{ 
+                duration: 0.8, 
+                delay: 0.1,
+                y: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+                rotateZ: { duration: 6, repeat: Infinity, ease: "easeInOut" }
+              }}
               viewport={{ once: true }}
               whileHover={{ 
                 y: -15,
@@ -633,10 +647,6 @@ const App = () => {
               animate={{
                 y: [0, -10, 0],
                 rotateZ: [0, 1, -1, 0]
-              }}
-              transition={{
-                y: { duration: 4, repeat: Infinity, ease: "easeInOut" },
-                rotateZ: { duration: 6, repeat: Infinity, ease: "easeInOut" }
               }}
               style={{ willChange: 'transform' }}
             >
@@ -700,7 +710,12 @@ const App = () => {
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ 
+                duration: 0.8, 
+                delay: 0.2,
+                y: { duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 },
+                rotateZ: { duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }
+              }}
               viewport={{ once: true }}
               whileHover={{ 
                 y: -15,
@@ -711,10 +726,6 @@ const App = () => {
               animate={{
                 y: [0, -8, 0],
                 rotateZ: [0, -1, 1, 0]
-              }}
-              transition={{
-                y: { duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 },
-                rotateZ: { duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }
               }}
               style={{ willChange: 'transform' }}
             >
@@ -778,7 +789,12 @@ const App = () => {
             <motion.div
               initial={{ opacity: 0, y: 100, x: 50 }}
               whileInView={{ opacity: 1, y: 0, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+              transition={{ 
+                duration: 0.8, 
+                delay: 0.3,
+                y: { duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 2 },
+                rotateZ: { duration: 8, repeat: Infinity, ease: "easeInOut", delay: 2 }
+              }}
               viewport={{ once: true }}
               whileHover={{ 
                 y: -15,
@@ -789,10 +805,6 @@ const App = () => {
               animate={{
                 y: [0, -12, 0],
                 rotateZ: [0, 1.5, -1.5, 0]
-              }}
-              transition={{
-                y: { duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 2 },
-                rotateZ: { duration: 8, repeat: Infinity, ease: "easeInOut", delay: 2 }
               }}
               style={{ willChange: 'transform' }}
             >
@@ -853,7 +865,12 @@ const App = () => {
             <motion.div
               initial={{ opacity: 0, y: 100, x: -50 }}
               whileInView={{ opacity: 1, y: 0, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{ 
+                duration: 0.8, 
+                delay: 0.4,
+                y: { duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 3 },
+                rotateZ: { duration: 9, repeat: Infinity, ease: "easeInOut", delay: 3 }
+              }}
               viewport={{ once: true }}
               whileHover={{ 
                 y: -15,
@@ -864,10 +881,6 @@ const App = () => {
               animate={{
                 y: [0, -9, 0],
                 rotateZ: [0, -1.2, 1.2, 0]
-              }}
-              transition={{
-                y: { duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 3 },
-                rotateZ: { duration: 9, repeat: Infinity, ease: "easeInOut", delay: 3 }
               }}
               style={{ willChange: 'transform' }}
             >
