@@ -85,7 +85,7 @@ const Logo = ({ size = 'md', showText = true, className = '' }) => {
               size === 'lg' ? 'text-sm' : 'text-base'
             }`}
           >
-            Creative Web Developer
+            Font-end Web Developer
           </motion.span>
         </motion.div>
       )}
