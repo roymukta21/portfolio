@@ -28,7 +28,7 @@ const Logo = ({ size = 'md', showText = true, className = '' }) => {
         <div className="absolute inset-0 bg-gradient-to-br from-yellow-300/20 to-orange-600/20"></div>
         
         {/* MR Letters */}
-        <div className="relative z-10 flex items-center justify-center">
+        <div className="relative z-10 flex ">
           <motion.span 
             className={`text-white font-black tracking-tighter mr-letters ${textSizes[size]}`}
             style={{ fontFamily: "'Poppins', sans-serif" }}

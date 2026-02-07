@@ -210,7 +210,7 @@ body {
 /* Container max width */
 .container-max {
   max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 /* Section padding */

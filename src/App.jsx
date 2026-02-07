@@ -241,7 +241,7 @@ const App = () => {
             : "bg-transparent"
         }`}
       >
-        <div className="container-max px-4 md:px-6">
+        <div className="container-max px-4 md:px-6 mx-auto">
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
             <motion.div
@@ -345,7 +345,7 @@ const App = () => {
               transition={{ duration: 0.3 }}
               className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg border-t border-gray-200/20 dark:border-white/10"
             >
-              <div className="container-max px-4 py-6">
+              <div className="container-max px-4 md:px-6 mx-auto py-6">
                 <div className="flex flex-col gap-4">
                   {[
                     "home",
@@ -379,7 +379,7 @@ const App = () => {
 
       {/* Hero Section */}
       <section className="section-padding" id="home">
-        <div className="container-max w-full">
+        <div className="container-max px-4 md:px-6 mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 w-fit">
@@ -457,7 +457,7 @@ const App = () => {
 
                 {/* Cartoon Image (appears on hover) */}
                 <motion.img
-                  src="/mukta-cartoon.jpg"
+                  src="/mukta-roy.jpg"
                   alt="Mukta Roy - Cartoon Avatar"
                   className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   initial={{ scale: 1.1 }}
@@ -503,7 +503,6 @@ const App = () => {
                   transition={{ duration: 0.5, delay: 1 }}
                   className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium text-gray-700 dark:text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 >
-                  Hover for cartoon! 🎨
                 </motion.div>
               </motion.div>
             </div>
@@ -516,7 +515,7 @@ const App = () => {
         className="about-section section-padding bg-white dark:bg-white/5"
         id="about"
       >
-        <div className="container-max">
+        <div className="container-max px-4 md:px-6 mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -539,8 +538,8 @@ const App = () => {
               >
                 <div className="w-full h-full rounded-xl overflow-hidden">
                   <img
-                    src="/mukta-cartoon.jpg"
-                    alt="Mukta Roy - Cartoon Avatar"
+                    src="/mukta-roy.jpg"
+                    alt="Mukta Roy"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -686,7 +685,7 @@ const App = () => {
           className="absolute top-1/2 left-1/4 w-16 h-16 bg-gradient-to-br from-yellow-300/10 to-orange-400/10 rounded-full blur-lg"
         />
 
-        <div className="container-max relative z-10">
+        <div className="container-max px-4 md:px-6 mx-auto relative z-10">
           <div className="text-center mb-16">
             <span className="text-yellow-500 font-bold uppercase tracking-wider text-sm">
               Services
@@ -1305,7 +1304,7 @@ const App = () => {
         className="skills-section section-padding bg-[#1b1b40] dark:bg-black text-white"
         id="skills"
       >
-        <div className="container-max">
+        <div className="container-max px-4 md:px-6 mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1616,7 +1615,7 @@ const App = () => {
 
       {/* Portfolio */}
       <section className="section-padding" id="portfolio">
-        <div className="container-max">
+        <div className="container-max px-4 md:px-6 mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-12">
             <div>
               <span className="text-primary font-bold uppercase tracking-wider text-sm">
@@ -1626,12 +1625,12 @@ const App = () => {
                 Featured Projects
               </h2>
             </div>
-            <button className="flex items-center gap-2 text-sm font-bold text-primary hover:underline">
+            {/* <button className="flex items-center gap-2 text-sm font-bold text-primary hover:underline">
               View All Projects
               <span className="material-symbols-outlined text-lg">
                 arrow_forward
               </span>
-            </button>
+            </button> */}
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Project 1 - Study Mate */}
@@ -1642,7 +1641,8 @@ const App = () => {
               viewport={{ once: true }}
               className="group relative rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-300"
             >
-              <div className="aspect-video w-full bg-gradient-to-br from-blue-500 via-purple-600 to-indigo-700 flex items-center justify-center">
+              <div className="aspect-video w-full bg-gradient-to-br from-blue-500 via-purple-600 to-indigo-700 flex items-center justify-center relative">
+                {/* Emoji - visible by default */}
                 <motion.div
                   animate={{
                     scale: [1, 1.1, 1],
@@ -1653,10 +1653,15 @@ const App = () => {
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                  className="text-white text-6xl font-bold opacity-20"
+                  className="text-white text-6xl font-bold opacity-20 group-hover:opacity-0 transition-opacity duration-500 z-10"
                 >
                   📚
                 </motion.div>
+                {/* Screenshot - visible on hover */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{ backgroundImage: "url('/Study-Mate.png')" }}
+                />
               </div>
               <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-6">
                 <span className="text-yellow-400 font-bold uppercase tracking-wide text-sm mb-2">
@@ -1711,7 +1716,8 @@ const App = () => {
               viewport={{ once: true }}
               className="group relative rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-300"
             >
-              <div className="aspect-video w-full bg-gradient-to-br from-red-500 via-orange-600 to-yellow-500 flex items-center justify-center">
+              <div className="aspect-video w-full bg-gradient-to-br from-red-500 via-orange-600 to-yellow-500 flex items-center justify-center relative">
+                {/* Emoji - visible by default */}
                 <motion.div
                   animate={{
                     scale: [1, 1.2, 1],
@@ -1722,10 +1728,15 @@ const App = () => {
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                  className="text-white text-6xl font-bold opacity-20"
+                  className="text-white text-6xl font-bold opacity-20 group-hover:opacity-0 transition-opacity duration-500 z-10"
                 >
                   🔥
                 </motion.div>
+                {/* Screenshot - visible on hover */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{ backgroundImage: "url('/skillSwap.png')" }}
+                />
               </div>
               <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-6">
                 <span className="text-yellow-400 font-bold uppercase tracking-wide text-sm mb-2">
@@ -1770,7 +1781,8 @@ const App = () => {
               viewport={{ once: true }}
               className="group relative rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-300"
             >
-              <div className="aspect-video w-full bg-gradient-to-br from-green-500 via-emerald-600 to-teal-600 flex items-center justify-center">
+              <div className="aspect-video w-full bg-gradient-to-br from-green-500 via-emerald-600 to-teal-600 flex items-center justify-center relative">
+                {/* Emoji - visible by default */}
                 <motion.div
                   animate={{
                     scale: [1, 1.15, 1],
@@ -1781,10 +1793,15 @@ const App = () => {
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                  className="text-white text-6xl font-bold opacity-20"
+                  className="text-white text-6xl font-bold opacity-20 group-hover:opacity-0 transition-opacity duration-500 z-10"
                 >
                   👨‍🍳
                 </motion.div>
+                {/* Screenshot - visible on hover */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{ backgroundImage: "url('/local-chef.png')" }}
+                />
               </div>
               <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-6">
                 <span className="text-yellow-400 font-bold uppercase tracking-wide text-sm mb-2">
@@ -1839,7 +1856,8 @@ const App = () => {
               viewport={{ once: true }}
               className="group relative rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-300"
             >
-              <div className="aspect-video w-full bg-gradient-to-br from-purple-500 via-pink-600 to-rose-600 flex items-center justify-center">
+              <div className="aspect-video w-full bg-gradient-to-br from-purple-500 via-pink-600 to-rose-600 flex items-center justify-center relative">
+                {/* Emoji - visible by default */}
                 <motion.div
                   animate={{
                     scale: [1, 1.3, 1],
@@ -1849,10 +1867,15 @@ const App = () => {
                     scale: { duration: 3, repeat: Infinity, ease: "easeInOut" },
                     rotate: { duration: 8, repeat: Infinity, ease: "linear" },
                   }}
-                  className="text-white text-6xl font-bold opacity-20"
+                  className="text-white text-6xl font-bold opacity-20 group-hover:opacity-0 transition-opacity duration-500 z-10"
                 >
                   ⭐
                 </motion.div>
+                {/* Screenshot - visible on hover */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{ backgroundImage: "url('/heroApp.png')" }}
+                />
               </div>
               <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-6">
                 <span className="text-yellow-400 font-bold uppercase tracking-wide text-sm mb-2">
@@ -1897,7 +1920,7 @@ const App = () => {
         className="section-padding bg-white dark:bg-white/5"
         id="contact"
       >
-        <div className="container-max">
+        <div className="container-max px-4 md:px-6 mx-auto">
           <div className="text-center mb-16">
             <span className="text-primary font-bold uppercase tracking-wider text-sm">
               Contact
@@ -1967,7 +1990,7 @@ const App = () => {
 
       {/* Footer */}
       <footer className="bg-[#1b1b40] dark:bg-black text-white py-12 border-t border-white/10">
-        <div className="container-max px-4 md:px-10">
+        <div className="container-max px-4 md:px-6 mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex flex-col md:items-start items-center gap-4">
               <div className="flex items-center gap-3">
