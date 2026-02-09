@@ -19,8 +19,6 @@ import {
   CardTitle,
 } from "./components/ui/Card";
 import { Badge } from "./components/ui/Badge";
-import { Input } from "./components/ui/Input";
-import { Textarea } from "./components/ui/Textarea";
 import ScrollIndicator from "./components/ui/ScrollIndicator";
 import Loading from "./components/ui/Loading";
 import MovingCursor from "./components/ui/MovingCursor";
@@ -393,11 +391,11 @@ const App = () => {
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
                   Mukta Roy
                 </span>
-                .<br />A Passionate Web Developer.
+                .<br />A Passionate MERN Stack Developer.
               </h1>
               <p className="text-text-muted dark:text-gray-400 text-lg mt-6">
-                Based in Bangladesh. I build modern, scalable web applications
-                using cutting-edge technologies and best practices.
+                Based in Bangladesh. I build modern, scalable full-stack web applications
+                using MongoDB, Express.js, React, and Node.js with best practices.
               </p>
               <div className="flex items-center gap-4 mt-8">
                 <Button
@@ -587,10 +585,9 @@ const App = () => {
                 viewport={{ once: true }}
                 className="text-text-muted dark:text-gray-400 leading-relaxed mb-4"
               >
-                I'm Mukta Roy, a passionate full-stack web developer with
-                expertise in modern JavaScript frameworks and backend
-                technologies. I love turning complex problems into simple,
-                elegant solutions through clean, efficient code.
+                I'm Mukta Roy, a passionate MERN stack developer with
+                expertise in building full-stack web applications. I specialize in
+                MongoDB, Express.js, React, and Node.js, creating scalable and efficient solutions.
               </motion.p>
 
               <motion.p
@@ -609,7 +606,7 @@ const App = () => {
                 {[
                   { icon: "mail", text: "muktaroy520@gmail.com" },
                   { icon: "location_on", text: "Bangladesh" },
-                  { icon: "code", text: "Web Developer" },
+                  { icon: "code", text: "MERN Stack Developer" },
                   { icon: "work", text: "Available for projects" },
                 ].map((item, index) => (
                   <motion.div
@@ -700,7 +697,7 @@ const App = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Service 1 - Frontend Development */}
+            {/* Service 1 - MERN Stack Development */}
             <motion.div
               initial={{ opacity: 0, y: 100, x: -50 }}
               whileInView={{ opacity: 1, y: 0, x: 0 }}
@@ -758,13 +755,12 @@ const App = () => {
                     </span>
                   </motion.div>
                   <CardTitle className="text-text-main dark:text-white relative z-10">
-                    Frontend Development
+                    MERN Stack Development
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-text-muted dark:text-gray-400 leading-relaxed relative z-10">
-                    Building responsive, interactive user interfaces using
-                    React, Next.js, and modern CSS frameworks like Tailwind CSS.
+                    Building full-stack web applications using MongoDB, Express.js, React, and Node.js with modern development practices.
                   </CardDescription>
                 </CardContent>
 
@@ -1345,7 +1341,7 @@ const App = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {/* Frontend */}
+            {/* MERN Stack */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -1364,14 +1360,14 @@ const App = () => {
                 >
                   code
                 </motion.span>
-                Frontend
+                MERN Stack
               </motion.h3>
               <div className="space-y-6">
                 {[
-                  { name: "HTML5 & CSS3", percentage: 95 },
-                  { name: "JavaScript (ES6+)", percentage: 90 },
-                  { name: "React / Next.js", percentage: 85 },
-                  { name: "Tailwind CSS", percentage: 95 },
+                  { name: "MongoDB", percentage: 85 },
+                  { name: "Express.js", percentage: 88 },
+                  { name: "React.js", percentage: 92 },
+                  { name: "Node.js", percentage: 87 },
                 ].map((skill, index) => (
                   <motion.div
                     key={skill.name}
@@ -1936,50 +1932,89 @@ const App = () => {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
             {/* Contact Info */}
             <div className="lg:col-span-2 flex flex-col gap-6">
-              <Card>
-                <CardContent className="p-6">
-                  <div className="size-10 rounded bg-yellow-500/20 text-yellow-500 flex items-center justify-center mb-4">
-                    <span className="material-symbols-outlined">call</span>
-                  </div>
-                  <CardTitle className="font-bold text-text-main dark:text-white mb-1">
-                    Phone
-                  </CardTitle>
-                  <CardDescription className="text-text-muted dark:text-gray-400 text-sm">
-                    +880 1794-239883
-                  </CardDescription>
-                </CardContent>
-              </Card>
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="hover:shadow-xl transition-shadow duration-300">
+                  <CardContent className="p-6">
+                    <motion.div
+                      whileHover={{ scale: 1.1, rotate: 360 }}
+                      transition={{ duration: 0.5 }}
+                      className="size-12 rounded-lg bg-yellow-500/20 text-yellow-500 flex items-center justify-center mb-4"
+                    >
+                      <span className="material-symbols-outlined text-2xl">call</span>
+                    </motion.div>
+                    <CardTitle className="font-bold text-text-main dark:text-white mb-2">
+                      Phone
+                    </CardTitle>
+                    <CardDescription className="text-text-muted dark:text-gray-400">
+                      +880 1794-239883
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </motion.div>
 
-              <Card>
-                <CardContent className="p-6">
-                  <div className="size-10 rounded bg-yellow-500/20 text-yellow-500 flex items-center justify-center mb-4">
-                    <span className="material-symbols-outlined">mail</span>
-                  </div>
-                  <CardTitle className="font-bold text-text-main dark:text-white mb-1">
-                    Email
-                  </CardTitle>
-                  <CardDescription className="text-text-muted dark:text-gray-400 text-sm">
-                    muktaroy520@gmail.com
-                  </CardDescription>
-                </CardContent>
-              </Card>
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="hover:shadow-xl transition-shadow duration-300">
+                  <CardContent className="p-6">
+                    <motion.div
+                      whileHover={{ scale: 1.1, rotate: 360 }}
+                      transition={{ duration: 0.5 }}
+                      className="size-12 rounded-lg bg-yellow-500/20 text-yellow-500 flex items-center justify-center mb-4"
+                    >
+                      <span className="material-symbols-outlined text-2xl">mail</span>
+                    </motion.div>
+                    <CardTitle className="font-bold text-text-main dark:text-white mb-2">
+                      Email
+                    </CardTitle>
+                    <CardDescription className="text-text-muted dark:text-gray-400">
+                      <a 
+                        href="mailto:muktaroy520@gmail.com"
+                        className="hover:text-yellow-500 transition-colors"
+                      >
+                        muktaroy520@gmail.com
+                      </a>
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </motion.div>
 
-              <Card>
-                <CardContent className="p-6">
-                  <div className="size-10 rounded bg-yellow-500/20 text-yellow-500 flex items-center justify-center mb-4">
-                    <span className="material-symbols-outlined">
-                      location_on
-                    </span>
-                  </div>
-                  <CardTitle className="font-bold text-text-main dark:text-white mb-1">
-                    Location
-                  </CardTitle>
-                  <CardDescription className="text-text-muted dark:text-gray-400 text-sm">
-                    Dhaka, Bangladesh
-                  </CardDescription>
-                </CardContent>
-              </Card>
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="hover:shadow-xl transition-shadow duration-300">
+                  <CardContent className="p-6">
+                    <motion.div
+                      whileHover={{ scale: 1.1, rotate: 360 }}
+                      transition={{ duration: 0.5 }}
+                      className="size-12 rounded-lg bg-yellow-500/20 text-yellow-500 flex items-center justify-center mb-4"
+                    >
+                      <span className="material-symbols-outlined text-2xl">
+                        location_on
+                      </span>
+                    </motion.div>
+                    <CardTitle className="font-bold text-text-main dark:text-white mb-2">
+                      Location
+                    </CardTitle>
+                    <CardDescription className="text-text-muted dark:text-gray-400">
+                      Dhaka, Bangladesh
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </motion.div>
             </div>
+            
             {/* Contact Form */}
             <div className="lg:col-span-3">
               <ContactForm />

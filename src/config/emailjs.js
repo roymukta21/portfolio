@@ -1,9 +1,9 @@
 // EmailJS Configuration
-// Replace these with your actual EmailJS credentials
+// Your EmailJS credentials
 
 export const EMAILJS_CONFIG = {
   SERVICE_ID: 'service_dp45guh',
-  TEMPLATE_ID: 'template_6bam8ud',
+  TEMPLATE_ID: 'template_yi7up16',
   PUBLIC_KEY: 'l-ZAe_tuDO6V8aSfA',
 };
 
