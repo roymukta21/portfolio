@@ -301,15 +301,20 @@ const App = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="flex items-center gap-4"
             >
-              <a href="/Mukta Roy Resume.pdf" download>
+              <a
+                href={`${process.env.PUBLIC_URL}/resume.pdf`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button size="default" className="flex items-center gap-2">
-                  <span>Resume</span>
+                  <span>View Resume</span>
+
                   <motion.span
                     animate={{ y: [0, -2, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
                     className="material-symbols-outlined text-lg"
                   >
-                    download
+                    visibility
                   </motion.span>
                 </Button>
               </a>
@@ -394,8 +399,9 @@ const App = () => {
                 .<br />A Passionate MERN Stack Developer.
               </h1>
               <p className="text-text-muted dark:text-gray-400 text-lg mt-6">
-                Based in Bangladesh. I build modern, scalable full-stack web applications
-                using MongoDB, Express.js, React, and Node.js with best practices.
+                Based in Bangladesh. I build modern, scalable full-stack web
+                applications using MongoDB, Express.js, React, and Node.js with
+                best practices.
               </p>
               <div className="flex items-center gap-4 mt-8">
                 <Button
@@ -500,8 +506,7 @@ const App = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 1 }}
                   className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium text-gray-700 dark:text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                >
-                </motion.div>
+                ></motion.div>
               </motion.div>
             </div>
           </div>
@@ -585,9 +590,10 @@ const App = () => {
                 viewport={{ once: true }}
                 className="text-text-muted dark:text-gray-400 leading-relaxed mb-4"
               >
-                I'm Mukta Roy, a passionate MERN stack developer with
-                expertise in building full-stack web applications. I specialize in
-                MongoDB, Express.js, React, and Node.js, creating scalable and efficient solutions.
+                I'm Mukta Roy, a passionate MERN stack developer with expertise
+                in building full-stack web applications. I specialize in
+                MongoDB, Express.js, React, and Node.js, creating scalable and
+                efficient solutions.
               </motion.p>
 
               <motion.p
@@ -760,7 +766,9 @@ const App = () => {
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-text-muted dark:text-gray-400 leading-relaxed relative z-10">
-                    Building full-stack web applications using MongoDB, Express.js, React, and Node.js with modern development practices.
+                    Building full-stack web applications using MongoDB,
+                    Express.js, React, and Node.js with modern development
+                    practices.
                   </CardDescription>
                 </CardContent>
 
@@ -1654,7 +1662,7 @@ const App = () => {
                   📚
                 </motion.div>
                 {/* Screenshot - visible on hover */}
-                <div 
+                <div
                   className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   style={{ backgroundImage: "url('/Study-Mate.png')" }}
                 />
@@ -1729,7 +1737,7 @@ const App = () => {
                   🔥
                 </motion.div>
                 {/* Screenshot - visible on hover */}
-                <div 
+                <div
                   className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   style={{ backgroundImage: "url('/skillSwap.png')" }}
                 />
@@ -1794,7 +1802,7 @@ const App = () => {
                   👨‍🍳
                 </motion.div>
                 {/* Screenshot - visible on hover */}
-                <div 
+                <div
                   className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   style={{ backgroundImage: "url('/local-chef.png')" }}
                 />
@@ -1868,7 +1876,7 @@ const App = () => {
                   ⭐
                 </motion.div>
                 {/* Screenshot - visible on hover */}
-                <div 
+                <div
                   className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   style={{ backgroundImage: "url('/heroApp.png')" }}
                 />
@@ -1945,7 +1953,9 @@ const App = () => {
                       transition={{ duration: 0.5 }}
                       className="size-12 rounded-lg bg-yellow-500/20 text-yellow-500 flex items-center justify-center mb-4"
                     >
-                      <span className="material-symbols-outlined text-2xl">call</span>
+                      <span className="material-symbols-outlined text-2xl">
+                        call
+                      </span>
                     </motion.div>
                     <CardTitle className="font-bold text-text-main dark:text-white mb-2">
                       Phone
@@ -1970,13 +1980,15 @@ const App = () => {
                       transition={{ duration: 0.5 }}
                       className="size-12 rounded-lg bg-yellow-500/20 text-yellow-500 flex items-center justify-center mb-4"
                     >
-                      <span className="material-symbols-outlined text-2xl">mail</span>
+                      <span className="material-symbols-outlined text-2xl">
+                        mail
+                      </span>
                     </motion.div>
                     <CardTitle className="font-bold text-text-main dark:text-white mb-2">
                       Email
                     </CardTitle>
                     <CardDescription className="text-text-muted dark:text-gray-400">
-                      <a 
+                      <a
                         href="mailto:muktaroy520@gmail.com"
                         className="hover:text-yellow-500 transition-colors"
                       >
@@ -2014,7 +2026,7 @@ const App = () => {
                 </Card>
               </motion.div>
             </div>
-            
+
             {/* Contact Form */}
             <div className="lg:col-span-3">
               <ContactForm />
